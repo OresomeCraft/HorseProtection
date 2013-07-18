@@ -85,7 +85,7 @@ public class HorseProtectionCommands implements CommandExecutor {
                         sender.sendMessage(ChatColor.DARK_RED + "You must be in-game to use this command.");
                     }
                 /*
-				} else if (args[0].equalsIgnoreCase("addmember")) {
+                } else if (args[0].equalsIgnoreCase("addmember")) {
 					if (sender instanceof Player) {
 						Player player = (Player) sender;
 						if (args.length == 2) {

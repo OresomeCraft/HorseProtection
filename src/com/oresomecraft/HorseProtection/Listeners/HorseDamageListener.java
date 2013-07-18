@@ -22,30 +22,31 @@ public class HorseDamageListener implements Listener {
     public void onEntityDamage(EntityDamageByEntityEvent event) {
         if (event.getEntityType() == EntityType.HORSE) {
             if (plugin.getConfig().getString(event.getEntity().getUniqueId().toString() + ".Owner") != null) {
-	        	if (event.getDamager() instanceof Player) {
-		                event.setCancelled(true);
-		                for (Player p : Bukkit.getOnlinePlayers()) {
-		                    if (p.hasPermission("HorseProtection.moderator")) {
-		                        p.sendMessage(ChatColor.RED + "User" + ChatColor.DARK_RED + ((Player) event.getDamager()).getName()
-		                                + ChatColor.RED + " tried to damage a horse belonging to "
-		                                + plugin.getConfig().getString(event.getEntity().getUniqueId().toString() + ".Owner"));
-		
-		                    }
-		                }
-	        	} else if (invalidDamageCause(event.getCause())) {
-	        		event.setCancelled(true);
-	        	}
+                if (event.getDamager() instanceof Player) {
+                    event.setCancelled(true);
+                    for (Player p : Bukkit.getOnlinePlayers()) {
+                        if (p.hasPermission("HorseProtection.moderator")) {
+                            p.sendMessage(ChatColor.RED + "User" + ChatColor.DARK_RED + ((Player) event.getDamager()).getName()
+                                    + ChatColor.RED + " tried to damage a horse belonging to "
+                                    + plugin.getConfig().getString(event.getEntity().getUniqueId().toString() + ".Owner"));
+
+                        }
+                    }
+                } else if (invalidDamageCause(event.getCause())) {
+                    event.setCancelled(true);
+                }
             }
         }
     }
 
-	private boolean invalidDamageCause(DamageCause cause) {
-		switch (cause) {
-		case ENTITY_ATTACK:
-		case PROJECTILE:
-		case MAGIC: 
-		case POISON: return true;
-		}
-		return false;
-	}
+    private boolean invalidDamageCause(DamageCause cause) {
+        switch (cause) {
+            case ENTITY_ATTACK:
+            case PROJECTILE:
+            case MAGIC:
+            case POISON:
+                return true;
+        }
+        return false;
+    }
 }
