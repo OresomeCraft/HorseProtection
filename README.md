@@ -6,6 +6,7 @@ Horse/Donkey and Mule protection for SMP
 
 Commands
 ========
+
 - /horse - Lists all commands
 - /horse protect - Protects a horse
 - /horse unprotect - Unprotects a horse
@@ -15,7 +16,9 @@ Commands
 
 Permissions
 ===========
+
 Normal users should have horseprotection.other.*
+
 Admins should have horseprotection.*
 
 - horseprotection.other.protect
