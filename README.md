@@ -6,11 +6,11 @@ Horse/Donkey and Mule protection for SMP
 
 Commands
 ========
-- /horse >> Lists all commands
-- /horse protect >> Protects a horse
-- /horse unprotect >> Unprotects a horse
-- /horse owner <name> >> Sets new owner of a horse
-- /horse ownedby >> See who owns the horse
+- /horse - Lists all commands
+- /horse protect - Protects a horse
+- /horse unprotect - Unprotects a horse
+- /horse owner <name> - Sets new owner of a horse
+- /horse ownedby - See who owns the horse
 
 
 Permissions
