@@ -9,7 +9,7 @@ Commands
 - /horse - Lists all commands
 - /horse protect - Protects a horse
 - /horse unprotect - Unprotects a horse
-- /horse owner <name> - Sets new owner of a horse
+- /horse owner name - Sets new owner of a horse
 - /horse ownedby - See who owns the horse
 
 
@@ -25,7 +25,6 @@ Admins should have horseprotection.*
 - horseprotection.other.removemember
 - horseprotection.other.cancel
 - horseprotection.other.seeowner
-
 - horseprotection.admin.bypassunprotect
 - horseprotection.admin.bypasschangeowner
 - horseprotection.admin.bypassprotection
