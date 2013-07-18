@@ -1,5 +1,5 @@
-name: HorseProtection
-main: com.gmail.AndrewJWickens.HorseProtection
+name: com.oresomecraft.HorseProtection
+main: com.oresomecraft.HorseProtection
 version: 1.0
 commands:
     horse:
