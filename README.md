@@ -31,3 +31,4 @@ Admins should have horseprotection.*
 - horseprotection.admin.bypassunprotect
 - horseprotection.admin.bypasschangeowner
 - horseprotection.admin.bypassprotection
+- horseprotection.moderator
