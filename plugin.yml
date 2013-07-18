@@ -1,0 +1,9 @@
+name: HorseProtection
+main: com.gmail.AndrewJWickens.HorseProtection
+version: 1.0
+commands:
+    horse:
+        description: The Horse Protection commands.
+        usage: /<command>
+        permission: horseprotection.command
+        permission-message: You don't have the permissions to use this command.
