@@ -1,5 +1,5 @@
-HorseProtectionPlugin
-=====================
+HorseProtection
+===============
 
 Horse/Donkey and Mule protection for SMP
 
