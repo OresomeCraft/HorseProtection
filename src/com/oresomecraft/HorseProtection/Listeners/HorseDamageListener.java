@@ -26,7 +26,7 @@ public class HorseDamageListener implements Listener {
                     event.setCancelled(true);
                     for (Player p : Bukkit.getOnlinePlayers()) {
                         if (p.hasPermission("HorseProtection.moderator")) {
-                            p.sendMessage(ChatColor.RED + "User" + ChatColor.DARK_RED + ((Player) event.getDamager()).getName()
+                            p.sendMessage(ChatColor.RED + "User " + ChatColor.DARK_RED + ((Player) event.getDamager()).getName()
                                     + ChatColor.RED + " tried to damage a horse belonging to "
                                     + plugin.getConfig().getString(event.getEntity().getUniqueId().toString() + ".Owner"));
 
