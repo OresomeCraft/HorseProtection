@@ -1,4 +1,4 @@
-name: com.oresomecraft.HorseProtection
+name: HorseProtection
 main: com.oresomecraft.HorseProtection
 version: 1.0
 commands:
