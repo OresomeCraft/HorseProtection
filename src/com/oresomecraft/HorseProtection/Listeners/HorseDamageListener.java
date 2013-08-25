@@ -26,10 +26,13 @@ public class HorseDamageListener implements Listener {
                     event.setCancelled(true);
                     for (Player p : Bukkit.getOnlinePlayers()) {
                         if (p.hasPermission("HorseProtection.moderator")) {
-                            p.sendMessage(ChatColor.RED + "User" + ChatColor.DARK_RED + ((Player) event.getDamager()).getName()
-                                    + ChatColor.RED + " tried to damage a horse belonging to "
-                                    + plugin.getConfig().getString(event.getEntity().getUniqueId().toString() + ".Owner"));
-
+                            Player damager = (Player) event.getDamager();
+                            if(p != damager) {
+                                p.sendMessage(ChatColor.RED + "User " + ChatColor.DARK_RED + ((Player) event.getDamager()).getName()
+                                        + ChatColor.RED + " tried to damage a horse belonging to "
+                                        + plugin.getConfig().getString(event.getEntity().getUniqueId().toString() + ".Owner"));
+                                damager.sendMessage(ChatColor.RED + "[HorseProtection] Don't try and kill " + plugin.getConfig().getString(event.getEntity().getUniqueId().toString() + ".Owner"));
+                            }
                         }
                     }
                 } else if (invalidDamageCause(event.getCause())) {
@@ -41,11 +44,11 @@ public class HorseDamageListener implements Listener {
 
     private boolean invalidDamageCause(DamageCause cause) {
         switch (cause) {
-            case ENTITY_ATTACK:
-            case PROJECTILE:
-            case MAGIC:
-            case POISON:
-                return true;
+        case ENTITY_ATTACK:
+        case PROJECTILE:
+        case MAGIC:
+        case POISON:
+            return true;
         }
         return false;
     }
